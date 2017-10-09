@@ -1,0 +1,20 @@
+
+
+package com.triffil;
+
+class A2
+{
+	public static void main(String args[])
+
+{
+		int m=5;
+
+	for(int i=1;i<=m;i++)
+	{	m=m*i;
+	System.out.println(m);
+	}
+	
+	
+}}
+		
+	

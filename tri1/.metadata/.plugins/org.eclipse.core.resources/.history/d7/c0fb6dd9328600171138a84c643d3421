@@ -1,0 +1,18 @@
+ 
+import javax.servlet.*;  
+import java.io.*;  
+public class DemoServlet extends GenericServlet{  
+public void doGet(ServletRequest req,ServletResponse res)  
+throws ServletException,IOException  
+{  
+res.setContentType("text/html");
+PrintWriter pw=res.getWriter();
+  
+
+pw.println("<html><body>");  
+pw.println("Welcome to servlet");  
+pw.println("</body></html>");  
+  
+pw.close(); 
+}
+}  

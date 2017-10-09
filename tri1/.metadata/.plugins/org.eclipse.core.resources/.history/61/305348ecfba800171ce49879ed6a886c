@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>View Records</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<p><a href="index.html">Home</a> | <a href="registration.html">Insert New Record</a> | <a href="logout.html">Logout</a></p>
+
+<form action="Views" name="view record">
+
+<input type="text" name="email"/><br/>
+<input type="submit" value="search"/>    
+</form>
+
+</body>
+</html>

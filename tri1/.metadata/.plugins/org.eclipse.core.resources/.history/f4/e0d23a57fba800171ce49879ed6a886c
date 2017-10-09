@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>View Records</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="form" >
+<p><a href="index.html">Home</a> | <a href="registration.html">Insert New Record</a> | <a href="logout.html">Logout</a></p>
+<h2>View Records</h2>
+<form action="Views" name="view record">
+
+</form>from>
+</div>
+</body>
+</html>

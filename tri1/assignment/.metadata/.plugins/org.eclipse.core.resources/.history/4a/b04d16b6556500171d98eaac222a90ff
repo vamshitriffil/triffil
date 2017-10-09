@@ -1,0 +1,10 @@
+package test1;
+
+public class Searchstring {
+public static void main(String[] args){
+	String sb=new String("Hello");
+	
+	System.out.println(sb.substring(0,3));
+	
+}
+}

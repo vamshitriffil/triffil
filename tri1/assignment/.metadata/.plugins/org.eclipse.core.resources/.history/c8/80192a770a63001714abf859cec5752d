@@ -1,0 +1,16 @@
+package test1;
+
+public class Search {
+
+			  public static void main(String[] args) {
+		      String s = "Hello readers";
+		  String s1 = s.substring(1);
+		      
+		      if(s1 == s) {
+		         System.out.println("Hello not found");
+		      } else {
+		         System.out.println("Found Hello at index " +s1);
+
+	}
+			  }}
+

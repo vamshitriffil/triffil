@@ -1,0 +1,15 @@
+package com.triffil2;
+
+public class B {
+
+	public static void main(String[] args) {
+		
+		String s1="India";
+		String s2="is";
+		String s3="my";
+		String s4="country";
+		
+
+	}
+
+}

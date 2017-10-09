@@ -1,0 +1,20 @@
+package core;
+import java.io.*;
+
+public class A {
+	public static void main(String[] args) {
+		try{
+		FileInputStream f=new FileInputStream("/home/triffil/Documents/a/a.txt");
+		FileInputStream f1=new FileInputStream("/home/triffil/Documents/a/b.txt");
+		SequenceInputStream i=new SequenceInputStream(f,f1);
+		int j=0;
+		while((j=i.read())!=0){
+			
+		}
+		}catch(Exception e){
+			System.out.println(e);
+		}
+
+	}
+
+}

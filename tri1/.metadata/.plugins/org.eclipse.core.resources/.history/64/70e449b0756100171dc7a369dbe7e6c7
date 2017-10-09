@@ -1,0 +1,40 @@
+package com.triffil;
+
+public class AA1 {
+	AA1 test;
+	static int var1,var2;
+	double d1,d2;
+	AA1(int var1,int var2){
+	this();
+	AA1.var1=var1+var2+AA1.var2;
+	AA1.var2=AA1.var1+var2;
+	}
+	AA1(){
+		d1=5;
+		d2=d1+3;
+		var2=(int)d2;
+	}
+	public static AA1 methodone(){
+	AA1 test=new AA1(34,5);
+	return test;
+	}
+	public double methodtwo(){
+	test=methodone();
+	return test.d1+test.d2;
+}
+public static void main(String args[]){
+AA1 test=new AA1();
+System.out.println(test.methodtwo());
+System.out.println(test.var1);
+System.out.println(test.var2);
+System.out.println(test.d1);
+System.out.println(test.d2);
+System.out.println(test.test.d2);
+System.out.println(test.test.d1);
+}
+
+
+	}
+
+
+                                                  

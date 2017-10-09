@@ -1,0 +1,10 @@
+package test1;
+
+public class Searchstring {
+public static void main(String[] args){
+	String s=("Hello Welcome to Triffil");
+	s.indexOf("Hello");
+	System.out.println(s);
+	
+}
+}

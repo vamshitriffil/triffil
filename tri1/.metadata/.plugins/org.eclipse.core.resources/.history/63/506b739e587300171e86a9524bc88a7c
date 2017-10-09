@@ -1,0 +1,14 @@
+package com.triffil;
+
+import java.io.IOException;
+
+public class Testthrows4 {
+	 
+		   public static void main(String args[]) throws IOException{  
+		     A m=new A();  
+		     m.method();  
+		  
+		    System.out.println("normal flow...");  
+		  }  
+
+}

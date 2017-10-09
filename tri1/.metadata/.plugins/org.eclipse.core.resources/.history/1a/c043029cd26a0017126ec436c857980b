@@ -1,0 +1,39 @@
+package com.triffil2;
+
+public class B {
+
+	public static void main(String[] args) {
+		
+		String s1="India";
+		String s2="is";
+		String s3="my";
+		String s4="country";
+		System.out.println(s1+" "+s2+" "+s3+" "+s4);
+		
+		char c[]=s1.toCharArray();
+		char t=c[0];
+		c[0]=c[s1.length()-1];
+		c[s1.length()-1]=t;
+		String s5=new String (c);
+		
+		char c[]=s1.toCharArray();
+		char t=c[0];
+		c[0]=c[s1.length()-1];
+		c[s1.length()-1]=t;
+		String s5=new String (c);
+		
+		char c[]=s1.toCharArray();
+		char t=c[0];
+		c[0]=c[s1.length()-1];
+		c[s1.length()-1]=t;
+		String s5=new String (c);
+		
+		char c[]=s1.toCharArray();
+		char t=c[0];
+		c[0]=c[s1.length()-1];
+		c[s1.length()-1]=t;
+		String s5=new String (c);
+
+	}
+
+}

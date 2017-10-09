@@ -1,0 +1,10 @@
+package test1;
+
+public class Searchstring {
+public static void main(String[] args){
+	StringBuilder s=new StringBuilder("Hello Welcome to Triffil");
+	i=s.("Hello");
+	System.out.println("i");
+	
+}
+}

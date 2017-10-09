@@ -1,0 +1,102 @@
+package curd;
+import java.util.*;  
+import java.sql.*;  
+
+public class EmpDao {
+	public static Connection getConnection(){  
+    Connection con=null;  
+    try{  
+        Class.forName("com.mysql.jdbc.Driver");  
+        con=DriverManager.getConnection("jdbc:mysql://localhost:3306/students","root","root");  
+    }catch(Exception e){System.out.println(e);}  
+    return con;  
+}  
+public static int save(Empbean e){  
+    int status=0;  
+    try{  
+        Connection con=EmpDao.getConnection();  
+        PreparedStatement ps=con.prepareStatement(  
+                     "insert into student(name,email,pass) values (?,?,?)");  
+        ps.setString(1,e.getName());  
+        ps.setString(2,e.getEmail());  
+        ps.setString(3,e.getPass());    
+          
+        status=ps.executeUpdate();  
+          
+        con.close();  
+    }catch(Exception ex){ex.printStackTrace();}  
+      
+    return status;  
+}  
+public static int update(Empbean e){  
+    int status=0;  
+    try{  
+        Connection con=EmpDao.getConnection();  
+        PreparedStatement ps=con.prepareStatement(  
+                     "update student set name=?,pass=? where email=?");  
+        ps.setString(1,e.getName());  
+        ps.setString(2,e.getEmail());  
+        ps.setString(3,e.getPass());  
+        
+        status=ps.executeUpdate();  
+          
+        con.close();  
+    }catch(Exception ex){ex.printStackTrace();}  
+      
+    return status;  
+}  
+public static int delete(String email){  
+    int status=0;  
+    try{  
+        Connection con=EmpDao.getConnection();  
+        PreparedStatement ps=con.prepareStatement("delete from student where email=?");  
+        ps.setString(1,email);  
+        status=ps.executeUpdate();  
+          
+        con.close();  
+    }catch(Exception e){e.printStackTrace();}  
+      
+    return status;  
+}  
+public static Empbean getEmpEmail(String email){  
+    Empbean e=new Empbean();  
+      
+    try{  
+        Connection con=EmpDao.getConnection();  
+        PreparedStatement ps=con.prepareStatement("select * from student where email=?");  
+        ps.setString(3,email);  
+        ResultSet rs=ps.executeQuery();  
+        if(rs.next()){  
+             
+            e.setName(rs.getString(1));  
+            e.setPass(rs.getString(2));  
+            e.setEmail(rs.getString(3));  
+           
+        }  
+        con.close();  
+    }catch(Exception ex){ex.printStackTrace();}  
+      
+    return e;  
+}  
+public static List<Empbean> getAllEmployees(){  
+    List<Empbean> list=new ArrayList<Empbean>();  
+      
+    try{  
+        Connection con=EmpDao.getConnection();  
+        PreparedStatement ps=con.prepareStatement("select * from student");  
+        ResultSet rs=ps.executeQuery();  
+        while(rs.next()){  
+            Empbean e=new Empbean();  
+            
+            e.setName(rs.getString(1));  
+            e.setPass(rs.getString(2));  
+            e.setEmail(rs.getString(3));  
+            
+            list.add(e);  
+        }  
+        con.close();  
+    }catch(Exception e){e.printStackTrace();}  
+      
+    return list;  
+}
+}

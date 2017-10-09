@@ -1,0 +1,18 @@
+package test1;
+
+public class RemoveString {
+	class String{
+		void delete(){
+			 		string s="malli";
+			 		System.out.println(s);
+			}
+	}
+	public static void main(String[] args){
+	
+		String sb=new String();
+		sb.delete(1,3);
+		System.out.println(sb);
+		
+	}
+
+}

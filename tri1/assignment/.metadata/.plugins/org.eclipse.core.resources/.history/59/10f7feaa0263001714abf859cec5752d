@@ -1,0 +1,12 @@
+package test1;
+
+public class Removestring {
+	public static void main(String[] args){
+	
+		String s=new String("Mallikharjuna");
+		
+		System.out.println(s);
+		
+	}
+
+}
